@@ -1,6 +1,6 @@
 /*
  * Cole Deushane
- * 27 November 2019
+ * 28 November 2019
  * P5JS Bubble Sort Visual
 */
 
@@ -20,12 +20,10 @@ function setup() {
     sort_start = false;
 
     // initializes the heights of the lines
-    for(var i = 0; i < width / 8; i++){
+    for(var i = 0; i < 100; i++){
         heights[i] = random(height);
     }
-
-    // console.log("Number of Lines: " + heights.length);
-
+     //console.log("Number of Lines: " + heights.length);
     }
 
 function draw() {
@@ -54,20 +52,20 @@ function draw() {
             strokeWeight(7);
             if(heights[y] == heights[i] && !sorted) {
                 stroke('red');
-                line(i * 8, heights[i], i * 8, height);
+                line((i * 8) + 4, heights[i], (i * 8) + 4, height);
             } else if(sorted) {
                 stroke('green');
-                line(i * 8, heights[i], i * 8, height);
+                line((i * 8) + 4, heights[i], (i * 8) + 4, height);
             } else {
                 stroke(255);
-                line(i * 8, heights[i], i * 8, height);
+                line((i * 8) + 4, heights[i], (i * 8) + 4, height);
             }
         }
     } else {
         for(var i = 0; i < heights.length; i++) {
             strokeWeight(7);
             stroke(255);
-            line(i * 8, heights[i], i * 8, height);
+            line((i * 8) + 4, heights[i], (i * 8) + 4, height);
         }
     }
 }
